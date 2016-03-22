@@ -594,64 +594,6 @@ public class MatchProgress extends AppCompatActivity {
 
         System.out.println("End of the match");
     }
-/*
-    private void takeScreenShot(){
-        final LinearLayout layout = (LinearLayout) findViewById(R.id.wholeScreen);
-        layout.post(new Runnable() {
-            @Override
-            public void run() {
-                Bitmap pic = makeScreenShot(layout);
-                try{
-                    if(pic != null)
-                        saveScreenShot(pic);
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
-    private Bitmap makeScreenShot(View v){
-        Bitmap screenShot = null;
-        try{
-            int width = v.getMeasuredWidth();
-            int height = v.getMeasuredHeight();
-            screenShot = Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_8888);
-
-            Canvas c = new Canvas(screenShot);
-            v.draw(c);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        return screenShot;
-    }
-
-    private void saveScreenShot(Bitmap bm){
-        ByteArrayOutputStream bao = null;
-        File file = null;
-
-        Date now = new Date();
-        android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now);
-
-        try{
-            bao = new ByteArrayOutputStream();
-            bm.compress(Bitmap.CompressFormat.PNG,40,bao);
-
-            file = new File(Environment.getExternalStorageDirectory()+File.separator+"CSK.png");
-            file.createNewFile();
-
-            FileOutputStream fos = new FileOutputStream(file);
-            fos.write(bao.toByteArray());
-            fos.close();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-*/
-
 
         public void takeScreenShot () {
 
