@@ -269,57 +269,6 @@ public class MatchProgress extends AppCompatActivity {
         savedInstanceState.putString("firstTeamSavedName", teamName.getText().toString());
         // etc.
     }
-/*
-    @Override
-    protected void onStop() {
-        super.onStop();  // Always call the superclass method first
-
-        // Save the note's current draft, because the activity is stopping
-        // and we want to be sure the current note progress isn't lost.
-        ContentValues values = new ContentValues();
-        values.put(NotePad.Notes.COLUMN_NAME_NOTE, getCurrentNoteText());
-        values.put(NotePad.Notes.COLUMN_NAME_TITLE, getCurrentNoteTitle());
-
-        getContentResolver().update(
-                mUri,    // The URI for the note to update.
-                values,  // The map of column names and new values to apply to them.
-                null,    // No SELECT criteria are used.
-                null     // No WHERE columns are used.
-        );
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();  // Always call the superclass method first
-
-        // The activity is either being restarted or started for the first time
-        // so this is where we should make sure that GPS is enabled
-        LocationManager locationManager =
-                (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        boolean gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
-        if (!gpsEnabled) {
-            // Create a dialog here that requests the user to enable GPS, and use an intent
-            // with the android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS action
-            // to take the user to the Settings screen to enable GPS when they click "OK"
-        }
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();  // Always call the superclass method first
-
-        // Activity being restarted from stopped state
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();  // Always call the superclass
-
-        // Stop method tracing that the activity started during onCreate()
-        android.os.Debug.stopMethodTracing();
-    }
-*/
 
 
 
