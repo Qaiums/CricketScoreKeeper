@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cricket Score Keeper</string>
+    <string name="action_settings">Settings</string>
+    <array name="player">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
+    <string name="title_activity_match_progress">MatchProgress</string>
+    <string name="done_button">Done</string>
+</resources>
