@@ -551,7 +551,7 @@ public class MatchProgress extends AppCompatActivity {
 
         try {
             // image naming and path  to include sd card  appending name you choose for file
-            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + "oldCSK.jpg";
+            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + teamName.getText().toString() +"snapshot.png";
 
             // create bitmap screen capture
             View v1 = getWindow().getDecorView().getRootView();
@@ -562,7 +562,7 @@ public class MatchProgress extends AppCompatActivity {
             File imageFile = new File(mPath);
 
             FileOutputStream outputStream = new FileOutputStream(imageFile);
-            int quality = 500;
+            int quality = 100;
             bitmap.compress(Bitmap.CompressFormat.PNG, quality, outputStream);
             outputStream.flush();
             outputStream.close();
