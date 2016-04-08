@@ -291,8 +291,7 @@ public class MatchProgress extends AppCompatActivity {
                 teamTotalRunsVariable);
         undoButton.setEnabled(true);
 
-        Toast.makeText(MatchProgress.this, runsAmountToUpdate+" runs score !",
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(MatchProgress.this, runsAmountToUpdate+" runs scored !", Toast.LENGTH_SHORT).show();
         if(!firstPlayerSelected){
             selectFirstPlayerOnStrikeDescision();
         }
@@ -350,6 +349,8 @@ public class MatchProgress extends AppCompatActivity {
         oneButton.setVisibility(oneButton.INVISIBLE);
         dotButton.setVisibility(dotButton.INVISIBLE);
         wicketButton.setVisibility(wicketButton.INVISIBLE);
+        Toast.makeText(MatchProgress.this,"OUT !!!", Toast.LENGTH_SHORT).show();
+
 
         nextPlayerDeployment();
         checkIfWicketLimitReached();
@@ -380,12 +381,17 @@ public class MatchProgress extends AppCompatActivity {
     }
 
     public void wideOrByeOrNo(String ball_type,TextView teamTotalRunsVariable,TextView currentScoreTotalRunVariable,TextView teamTotalExtraRunsVariable) {
-        if (ball_type.equals("wide"))
+        if (ball_type.equals("wide")) {
             wide++;
-        else if (ball_type.equals("No"))
+            Toast.makeText(MatchProgress.this," wide run scored !", Toast.LENGTH_SHORT).show();
+        }
+        else if (ball_type.equals("No")) {
             no++;
+            Toast.makeText(MatchProgress.this," no run scored !", Toast.LENGTH_SHORT).show();
+        }
         else {
             bye++;
+            Toast.makeText(MatchProgress.this," bye run scored !", Toast.LENGTH_SHORT).show();
             swapPlayers();
         }
         incrementCell(teamTotalRunsVariable);
@@ -394,6 +400,7 @@ public class MatchProgress extends AppCompatActivity {
         checkAndUpdateTargetRun(1);
         lastRunChange.setTeamChangeForExtraRun();
         undoButton.setEnabled(true);
+
 
     }
 
