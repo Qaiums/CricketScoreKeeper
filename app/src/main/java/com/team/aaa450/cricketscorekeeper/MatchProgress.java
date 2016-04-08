@@ -202,6 +202,7 @@ public class MatchProgress extends AppCompatActivity {
     public static int firstTeamScore ;
     public static String firstTeamName ;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -290,6 +291,8 @@ public class MatchProgress extends AppCompatActivity {
                 teamTotalRunsVariable);
         undoButton.setEnabled(true);
 
+        Toast.makeText(MatchProgress.this, runsAmountToUpdate+" runs score !",
+                Toast.LENGTH_SHORT).show();
         if(!firstPlayerSelected){
             selectFirstPlayerOnStrikeDescision();
         }
@@ -475,14 +478,14 @@ public class MatchProgress extends AppCompatActivity {
     //public void setButtonText(Button bt){bt.setText("Finish");}
 
     public void doneButtonFunctionality() {
-        if(firstTeam){
+       /* if(firstTeam){
             Toast.makeText(MatchProgress.this, "firstTeam is true",
                     Toast.LENGTH_LONG).show();
         }
         else{
             Toast.makeText(MatchProgress.this, "firstTeam is false",
                     Toast.LENGTH_LONG).show();
-        }
+        }*/
         if (firstTeam) {
             /*
             referenceId = contractClass.specialReferenceNumberGenerator.referenceIdGenerator();
@@ -562,7 +565,7 @@ public class MatchProgress extends AppCompatActivity {
             File imageFile = new File(mPath);
 
             FileOutputStream outputStream = new FileOutputStream(imageFile);
-            int quality = 100;
+            int quality = 60;
             bitmap.compress(Bitmap.CompressFormat.PNG, quality, outputStream);
             outputStream.flush();
             outputStream.close();

@@ -4,9 +4,11 @@
     android:layout_height="match_parent">
 
 
+
     <TextView
         android:id="@+id/endMatchDialogTextView"
         android:layout_width="wrap_content"
+        android:background="@drawable/trophy"
         android:layout_height="wrap_content"
         android:padding="20sp"
         android:textSize="30sp"

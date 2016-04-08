@@ -2,7 +2,17 @@
 <ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/qaium5"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/wholeScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="4sp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -17,21 +27,21 @@
         android:orientation="horizontal"
         android:paddingTop="70sp">
         <TextView
-            android:layout_width="204dp"
-            android:layout_height="89dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
             android:text="Over"
             android:paddingLeft="30sp"
-            android:textSize="60sp"
+            android:textSize="50sp"
             android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_weight="0.13" />
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/mainScreenTotalNumberOfOvers"
             android:layout_width="0dp"
             android:layout_height="80sp"
             android:layout_weight="0.82"
-           android:hint="0"
+            android:hint="0"
             android:textSize="55sp"
             android:textStyle="bold"
             android:textColor="#000000"
@@ -51,7 +61,7 @@
             android:layout_weight="1.8"
             android:text="Players"
             android:paddingLeft="30sp"
-            android:textSize="60sp"
+            android:textSize="50sp"
             android:textStyle="bold"
             android:textColor="#000000"
             />
@@ -60,7 +70,7 @@
             android:id="@+id/mainScreenTotalNumberOfPlayers"
             android:layout_width="0dp"
             android:layout_height="80sp"
-            android:layout_weight="1"
+            android:layout_weight="0.82"
             android:hint="0"
             android:textSize="55sp"
             android:textStyle="bold"
@@ -69,20 +79,19 @@
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/mainScreenSubmitButton"
-        android:paddingLeft="50sp"
-        android:layout_width="match_parent"
-        android:layout_height="102dp"
-        android:text="Submit"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:textSize="80sp"
-        />
-
-
-
-
 </LinearLayout>
+
+        <Button
+            android:id="@+id/mainScreenSubmitButton"
+            android:paddingLeft="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="65sp"
+            />
+
+    </LinearLayout>
 
 </ScrollView>
